@@ -23,6 +23,7 @@ class vegPrices(Resource):
         # forecast using the model
         out = loaded_model.predict(future_date)
 
+        # print the output
         print("%.2f" % out.yhat[0])
 
         return {"data": round(out.yhat[0],2)}
